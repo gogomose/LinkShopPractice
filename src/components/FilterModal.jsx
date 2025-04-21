@@ -1,6 +1,6 @@
 // src/components/FilterModal.jsx
 import React from 'react';
-import './FilterModal.css';
+import styles from './FilterModal.module.css';
 
 export default function FilterModal({ orderBy, setOrderBy, setShowFilter }) {
   const options = [
@@ -15,22 +15,20 @@ export default function FilterModal({ orderBy, setOrderBy, setShowFilter }) {
   };
 
   return (
-    <div className='modal-overlay' onClick={() => setShowFilter(false)}>
-      <div className='modal-box' onClick={(e) => e.stopPropagation()}>
-        <div className='modal-header'>
-          <div className='modal-title'>정렬</div>
-          <button className='modal-close' onClick={() => setShowFilter(false)}>
-            ✕
-          </button>
+    <div className={styles.modalOverlay} onClick={() => setShowFilter(false)}>
+      <div className={styles.modalBox} onClick={(e) => e.stopPropagation()}>
+        <div className={styles.modalHeader}>
+          <div className={styles.modalTitle}>정렬</div>
+          <button className={styles.modalClose} onClick={() => setShowFilter(false)}></button>
         </div>
         {options.map((option) => (
           <div
             key={option.value}
-            className={`modal-option ${orderBy === option.value ? 'selected' : ''}`}
+            className={`${styles.modalOption} ${orderBy === option.value ? styles.selected : ''}`}
             onClick={() => handleSelect(option.value)}
           >
             <span>{option.label}</span>
-            {orderBy === option.value && <span className='check'>✔</span>}
+            {orderBy === option.value && <span className={styles.check}>✔</span>}
           </div>
         ))}
       </div>

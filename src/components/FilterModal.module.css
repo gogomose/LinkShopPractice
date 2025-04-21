@@ -1,4 +1,4 @@
-.modal-overlay {
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.modal-box {
+.modalBox {
   background: white;
   border-radius: 20px;
   width: 320px;
@@ -20,7 +20,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.modal-header {
+.modalHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,18 +28,18 @@
   margin-bottom: 10px;
 }
 
-.modal-title {
+.modalTitle {
   font-size: 18px;
 }
 
-.modal-close {
+.modalClose {
   background: none;
   border: none;
   font-size: 20px;
   cursor: pointer;
 }
 
-.modal-option {
+.modalOption {
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
@@ -48,11 +48,11 @@
   font-size: 16px;
 }
 
-.modal-option.selected {
+.selected {
   color: #f14151;
   font-weight: bold;
 }
 
-.modal-option .check {
+.check {
   color: #f14151;
 }
